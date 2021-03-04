@@ -15,6 +15,14 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.png$/,
+        loader: "file-loader",
+        options: {
+          publicPath: "./dist/", // 경로 설정
+          name: "[name].[ext]?[hash]", //hash 무력화
+        },
+      },
     ],
   },
 };
