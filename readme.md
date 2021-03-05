@@ -17,8 +17,6 @@
 
 ## 🎈 2. 웹팩이 로드되는 과정
 
-<br>
-
 - `npm i -D webpack@4 webpack-cli`
 
 <br>
@@ -79,8 +77,6 @@ module.exports = {
 <br>
 
 ## 🎈 3. Loader
-
-<br>
 
 ### 3-1. css-loader, style-loader
 
