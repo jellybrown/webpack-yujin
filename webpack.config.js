@@ -16,11 +16,12 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.png$/,
-        loader: "file-loader",
+        test: /\.(png|jpg|gif)$/,
+        loader: "url-loader",
         options: {
           publicPath: "./dist/", // 경로 설정
           name: "[name].[ext]?[hash]", //hash 무력화
+          limit: 40000,
         },
       },
     ],
