@@ -1,7 +1,7 @@
 /*!
  * 
- *         Build Date: 2021-3-8 8:45:36 ├F10: PM┤
- *         Commit Version : 4d90856
+ *         Build Date: 2021-3-8 9:11:57 ├F10: PM┤ 
+ *         Commit Version : 47c0642
  * 
  *         Author: yujin mac
  * 
@@ -175,7 +175,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"./dist/bg.png?2258e1ce0d5e278176be2c57d0619f99\");\n\n//# sourceURL=webpack:///./src/bg.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"bg.png?2258e1ce0d5e278176be2c57d0619f99\");\n\n//# sourceURL=webpack:///./src/bg.png?");
 
 /***/ }),
 

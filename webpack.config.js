@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const childProcess = require("child_process");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -21,7 +22,7 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         loader: "url-loader",
         options: {
-          publicPath: "./dist/", // 경로 설정
+          //  publicPath: "./dist/",
           name: "[name].[ext]?[hash]", //hash 무력화
           limit: 40000,
         },
@@ -37,6 +38,19 @@ module.exports = {
         Commit Version : ${childProcess.execSync(`git rev-parse --short HEAD`)}
         Author: ${childProcess.execSync(`git config user.name`)}
         `,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      templateParameters: {
+        env: process.env.NODE_ENV === "development" ? "(개발용)" : "",
+      },
+      minify:
+        process.env.NODE_ENV === "production"
+          ? {
+              collapseWhitespace: true,
+              removeComments: true,
+            }
+          : false,
     }),
   ],
 };
