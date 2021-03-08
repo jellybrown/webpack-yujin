@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const childProcess = require("child_process");
 
 module.exports = {
   mode: "development",
@@ -26,4 +28,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    //
+    new webpack.BannerPlugin({
+      // toLocaleString: 사용자의 문화권에 맞는 시간표기법으로 년,월,일 시간을 리턴
+      banner: `
+        Build Date: ${new Date().toLocaleString()} 
+        Commit Version : ${childProcess.execSync(`git rev-parse --short HEAD`)}
+        Author: ${childProcess.execSync(`git config user.name`)}
+        `,
+    }),
+  ],
 };
