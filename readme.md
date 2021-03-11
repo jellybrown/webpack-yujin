@@ -125,3 +125,32 @@ module.exports = {
 - css파일을 분리
 - 배포할 때만 이용
 - 적용시, 배포할때 style-loader대신 얘가 제공하는 loader써야함
+
+<br>
+
+## 🎈 5. Babel
+
+- 크로스 브라우징(브라우저의 호환성)을 위한 것
+- 웹팩에 babel-loader를 적용
+
+<br>
+
+### 5-1. @babel/core @babel/cli
+
+- core: 파싱
+- cli: 터미널
+
+<br>
+
+### 5-2. babel/@preset-env
+
+- 바벨은 호환성을 위해 플러그인을 다운받고 적용시켜야 한다.
+- 그런 플러그인들이 묶여있는 것이 preset이다.
+
+<br>
+
+### 5-2. polyfill
+
+- Promise는 IE에서 인식하지 못한다. (caniuse 참고)
+- 또한 그냥 babel을 사용한다고해서 Promise가 다른 코드로 변경되지 않는다.
+- 이를 위해 corejs나 babel-polyfill을 이용한다.
